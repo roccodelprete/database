@@ -1,0 +1,6 @@
+-- nomi hotel dove hanno soggiornato o un cliente maschio, o un cliente femmina, ma non entrambi
+pi name (hotel)
+-
+(pi name (sigma gender = 'male' ((rho touristname←name, touristCountry←country (tourist))⨝(stay))⨝(hotel))
+∩
+pi name (sigma gender = 'female' ((rho touristname←name, touristCountry←country (tourist))⨝(stay))⨝(hotel)))
